@@ -1,51 +1,25 @@
 /* =====================================================
-   PORTFOLIO JAVASCRIPT
+   NAVBAR SCROLL EFFECT
 ===================================================== */
 
-
-/* =====================================================
-   1. ACTIVE NAVBAR LINK
-===================================================== */
-
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
+const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
 
-    let currentSection = "";
-
-    sections.forEach((section) => {
-
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-            currentSection = section.getAttribute("id");
-        }
-
-    });
-
-    navLinks.forEach((link) => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === `#${currentSection}`) {
-            link.classList.add("active");
-        }
-
-    });
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
 
 });
 
 
 /* =====================================================
-   2. TYPING ANIMATION
+   TYPING EFFECT
 ===================================================== */
 
-const typingText = document.getElementById("typing-text");
+const typingText = document.getElementById("typingText");
 
 const roles = [
     "Python Full Stack Developer",
@@ -54,27 +28,26 @@ const roles = [
 ];
 
 let roleIndex = 0;
-let characterIndex = 0;
-let isDeleting = false;
+let charIndex = 0;
+let deleting = false;
+
 
 function typeEffect() {
 
-    if (!typingText) return;
-
     const currentRole = roles[roleIndex];
 
-    if (!isDeleting) {
+    if (!deleting) {
 
         typingText.textContent =
-            currentRole.substring(0, characterIndex + 1);
+            currentRole.substring(0, charIndex + 1);
 
-        characterIndex++;
+        charIndex++;
 
-        if (characterIndex === currentRole.length) {
+        if (charIndex === currentRole.length) {
 
-            isDeleting = true;
+            deleting = true;
 
-            setTimeout(typeEffect, 1500);
+            setTimeout(typeEffect, 1800);
 
             return;
         }
@@ -82,17 +55,17 @@ function typeEffect() {
     } else {
 
         typingText.textContent =
-            currentRole.substring(0, characterIndex - 1);
+            currentRole.substring(0, charIndex - 1);
 
-        characterIndex--;
+        charIndex--;
 
-        if (characterIndex === 0) {
+        if (charIndex === 0) {
 
-            isDeleting = false;
+            deleting = false;
 
             roleIndex++;
 
-            if (roleIndex === roles.length) {
+            if (roleIndex >= roles.length) {
                 roleIndex = 0;
             }
 
@@ -100,62 +73,122 @@ function typeEffect() {
 
     }
 
-    const speed = isDeleting ? 60 : 100;
+    setTimeout(
+        typeEffect,
+        deleting ? 50 : 90
+    );
 
-    setTimeout(typeEffect, speed);
 }
+
 
 typeEffect();
 
 
 /* =====================================================
-   DARK / LIGHT THEME
+   ACTIVE NAVIGATION
 ===================================================== */
 
-const themeToggle = document.getElementById("themeToggle");
+const sections =
+    document.querySelectorAll("section");
 
-if (themeToggle) {
+const navLinks =
+    document.querySelectorAll(".nav-link");
 
-    themeToggle.addEventListener("click", function () {
 
-        document.body.classList.toggle("light-theme");
+window.addEventListener("scroll", () => {
 
-        if (document.body.classList.contains("light-theme")) {
+    let current = "";
 
-            themeToggle.innerHTML =
-                '<i class="bi bi-sun-fill"></i>';
+    sections.forEach(section => {
 
-            localStorage.setItem("theme", "light");
+        const sectionTop =
+            section.offsetTop - 150;
 
-        } else {
+        if (window.scrollY >= sectionTop) {
 
-            themeToggle.innerHTML =
-                '<i class="bi bi-moon-fill"></i>';
-
-            localStorage.setItem("theme", "dark");
+            current = section.getAttribute("id");
 
         }
 
     });
 
 
-    /* Remember user's selected theme */
+    navLinks.forEach(link => {
 
-    const savedTheme = localStorage.getItem("theme");
+        link.classList.remove("active");
 
-    if (savedTheme === "light") {
+        if (
+            link.getAttribute("href") ===
+            "#" + current
+        ) {
 
-        document.body.classList.add("light-theme");
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+/* =====================================================
+   THEME TOGGLE
+===================================================== */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+
+const savedTheme =
+    localStorage.getItem("portfolio-theme");
+
+
+if (savedTheme === "light") {
+
+    document.body.classList.add("light-theme");
+
+    themeToggle.innerHTML =
+        '<i class="bi bi-sun-fill"></i>';
+
+}
+
+
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-theme");
+
+
+    const isLight =
+        document.body.classList.contains("light-theme");
+
+
+    if (isLight) {
 
         themeToggle.innerHTML =
             '<i class="bi bi-sun-fill"></i>';
 
+        localStorage.setItem(
+            "portfolio-theme",
+            "light"
+        );
+
+    } else {
+
+        themeToggle.innerHTML =
+            '<i class="bi bi-moon-stars-fill"></i>';
+
+        localStorage.setItem(
+            "portfolio-theme",
+            "dark"
+        );
+
     }
 
-}
+});
+
 
 /* =====================================================
-   4. PROJECT FILTERING
+   PROJECT FILTER
 ===================================================== */
 
 const filterButtons =
@@ -165,36 +198,37 @@ const projectItems =
     document.querySelectorAll(".project-item");
 
 
-filterButtons.forEach((button) => {
+filterButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        filterButtons.forEach((btn) => {
+        filterButtons.forEach(btn => {
             btn.classList.remove("active");
         });
 
         button.classList.add("active");
 
-        const selectedFilter =
+
+        const filter =
             button.getAttribute("data-filter");
 
 
-        projectItems.forEach((project) => {
+        projectItems.forEach(item => {
 
             const categories =
-                project.getAttribute("data-category");
+                item.getAttribute("data-category");
 
 
             if (
-                selectedFilter === "all" ||
-                (categories && categories.includes(selectedFilter))
+                filter === "all" ||
+                categories.includes(filter)
             ) {
 
-                project.style.display = "block";
+                item.style.display = "block";
 
             } else {
 
-                project.style.display = "none";
+                item.style.display = "none";
 
             }
 
@@ -206,184 +240,26 @@ filterButtons.forEach((button) => {
 
 
 /* =====================================================
-   5. BACK TO TOP BUTTON
+   SCROLL REVEAL
 ===================================================== */
 
-const backToTop =
-    document.getElementById("backToTop");
-
-
-if (backToTop) {
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 500) {
-
-            backToTop.classList.add("show");
-
-        } else {
-
-            backToTop.classList.remove("show");
-
-        }
-
-    });
-
-
-    backToTop.addEventListener("click", () => {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
-
-}
-
-
-/* =====================================================
-   6. CONTACT FORM VALIDATION
-===================================================== */
-
-const contactForm =
-    document.getElementById("contactForm");
-
-
-if (contactForm) {
-
-    contactForm.addEventListener("submit", (event) => {
-
-        event.preventDefault();
-
-
-        const firstName =
-            document.getElementById("firstName");
-
-        const lastName =
-            document.getElementById("lastName");
-
-        const email =
-            document.getElementById("email");
-
-        const subject =
-            document.getElementById("subject");
-
-        const message =
-            document.getElementById("message");
-
-
-        /* Check required fields */
-
-        if (
-            !firstName ||
-            !lastName ||
-            !email ||
-            !subject ||
-            !message
-        ) {
-            return;
-        }
-
-
-        if (
-            firstName.value.trim() === "" ||
-            lastName.value.trim() === "" ||
-            email.value.trim() === "" ||
-            subject.value.trim() === "" ||
-            message.value.trim() === ""
-        ) {
-
-            alert("Please fill in all required fields.");
-
-            return;
-        }
-
-
-        /* Email validation */
-
-        const emailPattern =
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-        if (!emailPattern.test(email.value.trim())) {
-
-            alert("Please enter a valid email address.");
-
-            return;
-        }
-
-
-        /* Success message */
-
-        alert(
-            "Thank you! Your message has been submitted successfully."
-        );
-
-
-        contactForm.reset();
-
-    });
-
-}
-
-
-/* =====================================================
-   7. MOBILE NAVBAR CLOSE
-===================================================== */
-
-const navbarCollapse =
-    document.getElementById("navbarNav");
-
-
-navLinks.forEach((link) => {
-
-    link.addEventListener("click", () => {
-
-        if (
-            window.innerWidth < 992 &&
-            navbarCollapse &&
-            navbarCollapse.classList.contains("show")
-        ) {
-
-            const bootstrapCollapse =
-                bootstrap.Collapse.getInstance(navbarCollapse);
-
-            if (bootstrapCollapse) {
-
-                bootstrapCollapse.hide();
-
-            }
-
-        }
-
-    });
-
-});
-
-
-/* =====================================================
-   8. SCROLL REVEAL ANIMATION
-===================================================== */
-
-const revealElements = document.querySelectorAll(
-    ".section-heading, .skill-card, .project-card, " +
-    ".education-card, .contact-info, .contact-form, " +
-    ".about-image, #about .col-lg-7"
-);
+const revealElements =
+    document.querySelectorAll(".reveal");
 
 
 const revealObserver =
     new IntersectionObserver(
-        (entries, observer) => {
+        entries => {
 
-            entries.forEach((entry) => {
+            entries.forEach(entry => {
 
                 if (entry.isIntersecting) {
 
-                    entry.target.classList.add("reveal");
+                    entry.target.classList.add("active");
 
-                    observer.unobserve(entry.target);
+                    revealObserver.unobserve(
+                        entry.target
+                    );
 
                 }
 
@@ -391,12 +267,12 @@ const revealObserver =
 
         },
         {
-            threshold: 0.15
+            threshold: 0.12
         }
     );
 
 
-revealElements.forEach((element) => {
+revealElements.forEach(element => {
 
     revealObserver.observe(element);
 
@@ -404,22 +280,152 @@ revealElements.forEach((element) => {
 
 
 /* =====================================================
-   9. PROJECT LINK CHECK
+   BACK TO TOP
 ===================================================== */
 
-const projectLinks =
-    document.querySelectorAll(".project-links a");
+const backToTop =
+    document.getElementById("backToTop");
 
 
-projectLinks.forEach((link) => {
+window.addEventListener("scroll", () => {
 
-    link.addEventListener("click", (event) => {
+    if (window.scrollY > 500) {
 
-        if (link.getAttribute("href") === "#") {
+        backToTop.classList.add("show");
 
-            event.preventDefault();
+    } else {
 
-            alert("Project link will be added soon.");
+        backToTop.classList.remove("show");
+
+    }
+
+});
+
+
+backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+
+contactForm.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+
+    const firstName =
+        document.getElementById("firstName").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const subject =
+        document.getElementById("subject").value.trim();
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    if (
+        firstName === "" ||
+        email === "" ||
+        subject === "" ||
+        message === ""
+    ) {
+
+        alert("Please fill in all required fields.");
+
+        return;
+
+    }
+
+
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+    if (!emailPattern.test(email)) {
+
+        alert("Please enter a valid email address.");
+
+        return;
+
+    }
+
+
+    /*
+       The portfolio is hosted using GitHub Pages.
+       GitHub Pages does not provide a backend for
+       processing form submissions.
+
+       For now, open the user's email client with
+       the entered information.
+    */
+
+
+    const lastName =
+        document.getElementById("lastName").value.trim();
+
+
+    const mailSubject =
+        encodeURIComponent(subject);
+
+
+    const mailBody =
+        encodeURIComponent(
+            `Name: ${firstName} ${lastName}\n\n` +
+            `Email: ${email}\n\n` +
+            `Message:\n${message}`
+        );
+
+
+    window.location.href =
+        `mailto:kanneboinaanusha719@gmail.com` +
+        `?subject=${mailSubject}` +
+        `&body=${mailBody}`;
+
+});
+
+
+/* =====================================================
+   MOBILE NAVBAR CLOSE
+===================================================== */
+
+const navbarLinks =
+    document.querySelectorAll(".nav-link");
+
+const navbarCollapse =
+    document.getElementById("navbarNav");
+
+
+navbarLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        if (window.innerWidth < 992) {
+
+            const bsCollapse =
+                bootstrap.Collapse.getInstance(
+                    navbarCollapse
+                );
+
+            if (bsCollapse) {
+
+                bsCollapse.hide();
+
+            }
 
         }
 

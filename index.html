@@ -1,25 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Anusha Kanneboina - Aspiring Python Full Stack Developer Portfolio">
+        content="Anusha Kanneboina - Aspiring Python Full Stack Developer Portfolio">
+
+    <meta name="keywords"
+        content="Anusha Kanneboina, Python Full Stack Developer, React Developer, Web Developer">
 
     <meta name="author" content="Anusha Kanneboina">
 
     <title>Anusha Kanneboina | Python Full Stack Developer</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -29,26 +39,24 @@
 
     <!-- ================= NAVBAR ================= -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+
         <div class="container">
 
-            <a class="navbar-brand fw-bold" href="#home">
-                Anusha<span>.</span>
+            <a class="navbar-brand" href="#home">
+                <span>A</span>K
             </a>
 
-            <!-- Mobile Menu Button -->
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
 
-                <span class="navbar-toggler-icon"></span>
+                <i class="bi bi-list"></i>
+
             </button>
 
-            <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
 
                 <ul class="navbar-nav ms-auto align-items-lg-center">
@@ -77,15 +85,12 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
 
-                    <!-- Theme Button -->
                     <li class="nav-item ms-lg-3">
-                        <button id="themeToggle"
-                                class="btn theme-btn"
-                                aria-label="Toggle theme">
 
-                            <i class="bi bi-moon-fill"></i>
-
+                        <button id="themeToggle" class="theme-btn">
+                            <i class="bi bi-moon-stars-fill"></i>
                         </button>
+
                     </li>
 
                 </ul>
@@ -93,443 +98,221 @@
             </div>
 
         </div>
+
     </nav>
 
 
-    <!-- ================= HOME SECTION ================= -->
+    <!-- ================= HERO ================= -->
 
-    <main>
+    <section id="home" class="hero-section">
 
-        <section id="home" class="hero-section">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
 
-            <div class="container">
+        <div class="container">
 
-                <div class="row align-items-center min-vh-100">
+            <div class="row align-items-center min-vh-100">
 
-                    <!-- Hero Content -->
+                <!-- Hero Content -->
 
-                    <div class="col-lg-7">
+                <div class="col-lg-7 hero-content reveal">
 
-                        <p class="hero-intro">
-                            Hi, I'm
-                        </p>
-
-                        <h1>
-                            Anusha Kanneboina
-                        </h1>
-
-                        <h2>
-                            Aspiring
-                            <span id="typing-text">
-                                Python Full Stack Developer
-                            </span>
-                        </h2>
-
-                        <p class="hero-description">
-                            I build responsive, user-friendly web applications
-                            and continuously improve my skills in modern web
-                            technologies and Python Full Stack Development.
-                        </p>
-
-                        <!-- Hero Buttons -->
-
-                        <div class="hero-buttons">
-
-                            <!-- View Projects -->
-                            <a href="#projects" class="btn btn-primary">
-                             View My Projects
-                             <i class="bi bi-arrow-right"></i>
-                            </a>
-
-                            <!-- Download Resume -->
-                            <a href="file:///D:/portfolio/Kanneboina%20Anusha.pdf"
-                             class="btn btn-resume"
-                             download>
-                             Download Resume
-                             <i class="bi bi-download"></i>
-                            </a>
-
-                            <!-- Contact -->
-                            <a href="#contact" class="btn btn-outline-light">
-                             Contact Me
-                             <i class="bi bi-envelope"></i>
-                            </a>
-                        </div>
-
-
-                        <!-- Social Links -->
-
-                        <div class="social-links mt-4">
-
-                            <a href="https://github.com/Anusha-kanneboina"
-                               target="_blank"
-                               aria-label="GitHub">
-
-                                <i class="bi bi-github"></i>
-
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/anusha-kanneboina-4a341b331"
-                               target="_blank"
-                               aria-label="LinkedIn">
-
-                                <i class="bi bi-linkedin"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Profile Image -->
-
-                    <div class="col-lg-5 text-center">
-
-                        <div class="profile-wrapper">
-
-                            <img src="anuu.jpeg"
-                                 alt="Anusha Kanneboina"
-                                 class="profile-image">
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ABOUT SECTION ================= -->
-
-<section id="about" class="section-padding">
-
-    <div class="container">
-
-        <!-- Section Heading -->
-        <div class="section-heading text-center">
-
-            <p class="section-subtitle">GET TO KNOW ME</p>
-
-            <h2>About <span class="text-gradient">Me</span></h2>
-
-            <p>
-                A little more about my journey, skills and career goals.
-            </p>
-
-        </div>
-
-
-        <div class="row align-items-center g-5">
-
-            <!-- About Image -->
-            <div class="col-lg-5">
-
-                <div class="about-image">
-
-                    <img
-                        src="anu.jpeg"
-                        alt="Anusha Kanneboina"
-                        class="img-fluid rounded-4"
-                    >
-
-                </div>
-
-            </div>
-
-
-            <!-- About Content -->
-            <div class="col-lg-7">
-
-                <h3>
-                    Passionate about building
-                    <span class="text-gradient">
-                        modern web applications.
-                    </span>
-                </h3>
-
-                <p>
-                    Hi, I'm Anusha Kanneboina, a B.Tech graduate in
-                    Electronics and Communication Engineering from JNTUH.
-                    I am passionate about web development and currently
-                    building my skills in Python Full Stack Development.
-                </p>
-
-                <p>
-                    I enjoy creating responsive, user-friendly websites and
-                    interactive web applications. I am currently expanding my
-                    skills across frontend and backend development with Python,
-                    Django and FastAPI, while continuously improving my
-                    problem-solving and development skills.
-                </p>
-
-
-                <!-- Info Cards -->
-<div class="row g-3 mt-3">
-
-    <!-- Education -->
-    <div class="col-sm-6">
-
-        <div class="info-card">
-
-            <i class="bi bi-mortarboard-fill"></i>
-
-            <h5>Education</h5>
-
-            <p>
-                B.Tech – ECE
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- Frontend -->
-    <div class="col-sm-6">
-
-        <div class="info-card">
-
-            <i class="bi bi-window-stack"></i>
-
-            <h5>Frontend</h5>
-
-            <p>
-                HTML, CSS, JavaScript, Bootstrap & React.js
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- Backend -->
-    <div class="col-sm-6">
-
-        <div class="info-card">
-
-            <i class="bi bi-server"></i>
-
-            <h5>Backend</h5>
-
-            <p>
-                 Python, Django & FastAPI (Learning)
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- Database -->
-    <div class="col-sm-6">
-
-        <div class="info-card">
-
-            <i class="bi bi-database-fill"></i>
-
-            <h5>Database</h5>
-
-            <p>
-                SQL & PL/SQL
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-                <!-- About Buttons -->
-                <div class="hero-buttons mt-4">
-
-                    <a href="#skills"
-                       class="btn btn-primary">
-                        Explore My Skills
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-
-                    <a href="#contact"
-                       class="btn btn-outline-light">
-                        Let's Connect
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-        <!-- ================= SKILLS SECTION ================= -->
-
-        <section id="skills" class="section-padding">
-
-            <div class="container">
-
-                <div class="section-heading text-center">
-
-                    <p class="section-subtitle">
-                        MY SKILLS
+                    <p class="hero-intro">
+                        Hello, I'm
                     </p>
 
+                    <h1>
+                        Anusha <span>Kanneboina</span>
+                    </h1>
+
                     <h2>
-                        Technologies I Work With
+                        <span id="typingText"></span>
+                        <span class="cursor">|</span>
                     </h2>
+
+                    <p class="hero-description">
+                        B.Tech ECE graduate passionate about building responsive,
+                        user-friendly web applications using modern web technologies
+                        and Python-based development.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#projects" class="btn btn-primary-custom">
+                            <i class="bi bi-grid"></i>
+                            View Projects
+                        </a>
+
+                        <a href="Kanneboina%20Anusha.pdf"
+                           class="btn btn-outline-custom"
+                           download>
+                            <i class="bi bi-download"></i>
+                            Download Resume
+                        </a>
+
+                    </div>
+
+                    <div class="social-links">
+
+                        <a href="https://github.com/Anusha-kanneboina"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/anushakanneboina"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="mailto:kanneboinaanusha719@gmail.com"
+                           aria-label="Email">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+
+                    </div>
 
                 </div>
 
 
-                <div class="row g-4">
+                <!-- Profile Image -->
 
-                    <!-- Frontend -->
+                <div class="col-lg-5 text-center reveal">
 
-                    <div class="col-md-6 col-lg-4">
+                    <div class="profile-wrapper">
 
-                        <div class="skill-card">
+                        <div class="profile-ring"></div>
 
-                            <div class="skill-icon">
-                                <i class="bi bi-window"></i>
-                            </div>
+                        <img
+                            src="anuu.jpeg"
+                            alt="Anusha Kanneboina"
+                            class="profile-image">
 
-                            <h3>Frontend</h3>
+                        <div class="floating-card card-one">
+                            <i class="bi bi-code-slash"></i>
+                            <span>Code</span>
+                        </div>
 
-                            <div class="skill-tags">
-
-                                <span>HTML5</span>
-                                <span>CSS3</span>
-                                <span>JavaScript</span>
-                                <span>Bootstrap</span>
-                                <span>React.js</span>
-
-                            </div>
-
+                        <div class="floating-card card-two">
+                            <i class="bi bi-cpu"></i>
+                            <span>Python</span>
                         </div>
 
                     </div>
 
+                </div>
 
-                    <!-- Backend -->
+            </div>
 
-                    <div class="col-md-6 col-lg-4">
+        </div>
 
-                        <div class="skill-card">
+    </section>
 
-                            <div class="skill-icon">
-                                <i class="bi bi-server"></i>
-                            </div>
 
-                            <h3>Backend</h3>
+    <!-- ================= ABOUT ================= -->
 
-                            <div class="skill-tags">
+    <section id="about" class="section-padding">
 
-                                <span>Python</span>
-                                <span>Django</span>
-                                <span>FastAPI</span>
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>ABOUT ME</span>
+
+                <h2>Turning Ideas Into <strong>Web Experiences</strong></h2>
+
+                <p>
+                    A quick introduction about my background and development journey.
+                </p>
+
+            </div>
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-5 reveal">
+
+                    <div class="about-image-box">
+
+                        <img
+                            src="anuu.jpeg"
+                            alt="Anusha Kanneboina">
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-7 reveal">
+
+                    <h3>
+                        Aspiring Python Full Stack Developer
+                    </h3>
+
+                    <p class="about-text">
+
+                        I am a B.Tech graduate in Electronics and Communication
+                        Engineering from JNTUH, currently building my skills in
+                        Python Full Stack Development.
+
+                    </p>
+
+                    <p class="about-text">
+
+                        I enjoy developing responsive interfaces, solving programming
+                        problems and learning technologies that help me create
+                        practical web applications.
+
+                    </p>
+
+
+                    <div class="about-info-grid">
+
+                        <div class="info-card">
+
+                            <i class="bi bi-mortarboard-fill"></i>
+
+                            <div>
+                                <small>Education</small>
+                                <strong>B.Tech - ECE</strong>
                             </div>
 
                         </div>
 
-                    </div>
 
+                        <div class="info-card">
 
-                    <!-- Database -->
+                            <i class="bi bi-code-square"></i>
 
-                    <div class="col-md-6 col-lg-4">
-
-                        <div class="skill-card">
-
-                            <div class="skill-icon">
-                                <i class="bi bi-database"></i>
-                            </div>
-
-                            <h3>Database</h3>
-
-                            <div class="skill-tags">
-
-                                <span>SQL</span>
-                                <span>PL/SQL</span>
-
+                            <div>
+                                <small>Focus</small>
+                                <strong>Full Stack Development</strong>
                             </div>
 
                         </div>
 
-                    </div>
 
+                        <div class="info-card">
 
-                    <!-- Tools -->
+                            <i class="bi bi-laptop"></i>
 
-                    <div class="col-md-6 col-lg-4">
-
-                        <div class="skill-card">
-
-                            <div class="skill-icon">
-                                <i class="bi bi-tools"></i>
-                            </div>
-
-                            <h3>Tools</h3>
-
-                            <div class="skill-tags">
-
-                                <span>Git</span>
-                                <span>GitHub</span>
-
+                            <div>
+                                <small>Frontend</small>
+                                <strong>HTML5 • CSS3 • JavaScript • Bootstrap & React.js</strong>
                             </div>
 
                         </div>
 
-                    </div>
 
+                        <div class="info-card">
 
-                    <!-- Programming -->
+                            <i class="bi bi-database-fill"></i>
 
-                    <div class="col-md-6 col-lg-4">
-
-                        <div class="skill-card">
-
-                            <div class="skill-icon">
-                                <i class="bi bi-terminal"></i>
-                            </div>
-
-                            <h3>Programming</h3>
-
-                            <div class="skill-tags">
-
-                                <span>Core Python</span>
-                                <span>Advanced Python</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Learning -->
-
-                    <div class="col-md-6 col-lg-4">
-
-                        <div class="skill-card">
-
-                            <div class="skill-icon">
-                                <i class="bi bi-lightbulb"></i>
-                            </div>
-
-                            <h3>Currently Learning</h3>
-
-                            <div class="skill-tags">
-
-                                <span>FastAPI</span>
-                                <span>Advanced Python</span>
-                                <span>AI</span>
-                                <span>DSA</span>
-
+                            <div>
+                                <small>Database</small>
+                                <strong>SQL & PL/SQL</strong>
                             </div>
 
                         </div>
@@ -540,293 +323,383 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- ================= EDUCATION SECTION ================= -->
+    <!-- ================= SKILLS ================= -->
 
-        <section id="education" class="section-padding">
+    <section id="skills" class="section-padding section-dark">
 
-            <div class="container">
+        <div class="container">
 
-                <div class="section-heading text-center">
+            <div class="section-heading reveal">
 
-                    <p class="section-subtitle">
-                        EDUCATION
-                    </p>
+                <span>TECHNICAL SKILLS</span>
 
-                    <h2>
-                        My Academic Journey
-                    </h2>
+                <h2>My <strong>Skills</strong></h2>
+
+                <p>
+                    Technologies and tools I use while building projects.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- Frontend -->
+
+                <div class="col-md-6 col-lg-4 reveal">
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="bi bi-window-stack"></i>
+                        </div>
+
+                        <h3>Frontend</h3>
+
+                        <div class="skill-tags">
+
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                            <span>React.js</span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
+
+                <!-- Backend -->
+
+                <div class="col-md-6 col-lg-4 reveal">
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="bi bi-server"></i>
+                        </div>
+
+                        <h3>Backend</h3>
+
+                        <div class="skill-tags">
+
+                            <span>Python</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Database -->
+
+                <div class="col-md-6 col-lg-4 reveal">
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="bi bi-database"></i>
+                        </div>
+
+                        <h3>Database</h3>
+
+                        <div class="skill-tags">
+
+                            <span>SQL</span>
+                            <span>PL/SQL</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Programming -->
+
+                <div class="col-md-6 col-lg-4 reveal">
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="bi bi-terminal"></i>
+                        </div>
+
+                        <h3>Programming</h3>
+
+                        <div class="skill-tags">
+
+                            <span>Core Python</span>
+                            <span>Advanced Python</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tools -->
+
+                <div class="col-md-6 col-lg-4 reveal">
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="bi bi-git"></i>
+                        </div>
+
+                        <h3>Tools</h3>
+
+                        <div class="skill-tags">
+
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>VS Code</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Learning -->
+
+                <div class="col-md-6 col-lg-4 reveal">
+
+                    <div class="skill-card learning-card">
+
+                        <div class="skill-icon">
+                            <i class="bi bi-stars"></i>
+                        </div>
+
+                        <h3>Currently Learning</h3>
+
+                        <div class="skill-tags">
+                            <span>Django</span>
+                            <span>FastAPI</span>
+                            <span>AI</span>
+                            <span>DSA</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education" class="section-padding">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>EDUCATION</span>
+
+                <h2>My Academic <strong>Journey</strong></h2>
+
+            </div>
+
+
+            <div class="education-wrapper reveal">
+
+                <div class="education-line"></div>
 
                 <div class="education-card">
 
                     <div class="education-icon">
+
                         <i class="bi bi-mortarboard-fill"></i>
+
                     </div>
 
-                    <div>
+                    <div class="education-content">
 
                         <span class="education-year">
                             2022 - 2026
                         </span>
 
                         <h3>
-                            Bachelor of Technology
+                            Bachelor of Technology - Electronics & Communication Engineering
                         </h3>
 
                         <h4>
-                            Electronics & Communication Engineering
+                            Jawaharlal Nehru Technological University Affiliated Hyderabad
                         </h4>
 
                         <p>
-                            JNTUH
+                            Developed a strong technical foundation while exploring
+                            programming, web development and software technologies.
                         </p>
 
-                        <strong>
-                            CGPA: 8.36
-                        </strong>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= PROJECTS SECTION ================= -->
-
-        <section id="projects" class="section-padding">
-
-            <div class="container">
-
-                <div class="section-heading text-center">
-
-                    <p class="section-subtitle">
-                        MY PROJECTS
-                    </p>
-
-                    <h2>
-                        Things I've Built
-                    </h2>
-
-                    <p>
-                        A collection of projects that showcase my development
-                        skills and learning journey.
-                    </p>
-
-                </div>
-
-
-                <!-- Project Filters -->
-
-                <div class="project-filters text-center mb-5">
-
-                    <button class="filter-btn active"
-                            data-filter="all">
-                        All
-                    </button>
-
-                    <button class="filter-btn"
-                            data-filter="frontend">
-                        Frontend
-                    </button>
-                    
-                    <button class="filter-btn"
-                            data-filter="python">
-                        Python
-                    </button>
-
-                    <button class="filter-btn"
-                            data-filter="javascript">
-                        JavaScript
-                    </button>
-
-                    <button class="filter-btn"
-                            data-filter="iot">
-                        IoT
-                    </button>
-
-                </div>
-
-
-                <div class="row g-4" id="projectContainer">
-
-
-                    <!-- Project 1 -->
-
-                    <div class="col-md-6 col-lg-4 project-item"
-                         data-category="javascript frontend">
-
-                        <div class="project-card">
-
-                            <div class="project-image">
-
-                                <img src="cal.png"
-                                     alt="Advanced Scientific Calculator">
-
-                            </div>
-
-                            <div class="project-content">
-
-                                <span class="project-type">
-                                    JavaScript
-                                </span>
-
-                                <h3>
-                                    Advanced Scientific Calculator
-                                </h3>
-
-                                <p>
-                                    An interactive scientific calculator
-                                    built using HTML, CSS and JavaScript.
-                                </p>
-
-                                <div class="project-tech">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>JavaScript</span>
-                                </div>
-
-                                <div class="project-links">
-
-                                    <a href="https://github.com/Anusha-kanneboina/Advanced-Scientific-Calculator"
-                                       target="_blank">
-                                        GitHub
-                                        <i class="bi bi-github"></i>
-                                    </a>
-
-                                    <a href="https://anusha-kanneboina.github.io/Advanced-Scientific-Calculator/"
-                                       target="_blank">
-                                        Live Demo
-                                        <i class="bi bi-box-arrow-up-right"></i>
-                                    </a>
-
-                                </div>
-
-                            </div>
-
+                        <div class="cgpa-badge">
+                            CGPA: <strong>8.36</strong>
                         </div>
 
                     </div>
 
-
-                    <!-- Project 2 -->
-<!-- ================= TO-DO LIST PROJECT ================= -->
-
-                    <div class="col-md-6 col-lg-4 project-item"
-                         data-category="javascript frontend">
-
-                        <div class="project-card">
-
-                            <div class="project-image">
-
-                                <img src="to-do-list.png"
-                                alt="To-Do List Application">
-
-                            </div>
-
-                            <div class="project-content">
-    
-                            <span class="project-type">
-                            JavaScript Project
-                            </span>
-
-                            <h3>
-                            To-Do List Application
-                            </h3>
-
-                            <p>
-                            An interactive task management application that allows
-                            users to add, edit, complete and delete tasks.
-                            </p>
-
-                            <div class="project-tech">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>LocalStorage</span>
-
-                            </div>
-
-            
-
-            <div class="project-links">
-
-                <a href="https://github.com/Anusha-kanneboina/to-do-list"
-                   target="_blank">
-                    GitHub
-                    <i class="bi bi-github"></i>
-                </a>
-
-                <a href="https://anusha-kanneboina.github.io/to-do-list/"
-                   target="_blank">
-                    Live Demo
-                    <i class="bi bi-box-arrow-up-right"></i>
-                </a>
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</div>             
-                    <!-- Project 3 -->
-                    <div class="col-md-6 col-lg-4 project-item"
-                         data-category="iot python">
 
-                        <div class="project-card">
+    <!-- ================= PROJECTS ================= -->
 
-                            <div class="project-image">
+    <section id="projects" class="section-padding section-dark">
 
-                                <img src="animal.png"
-                                     alt="Animal Detection Project">
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>MY WORK</span>
+
+                <h2>Featured <strong>Projects</strong></h2>
+
+                <p>
+                    Practical projects that demonstrate my development skills.
+                </p>
+
+            </div>
+
+
+            <!-- Filter Buttons -->
+
+            <div class="project-filters reveal">
+
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="frontend">
+                    Frontend
+                </button>
+
+                <button class="filter-btn" data-filter="javascript">
+                    JavaScript
+                </button>
+
+            </div>
+
+
+            <!-- Featured Projects -->
+
+            <div class="row g-4 project-container">
+
+
+                <!-- Calculator -->
+
+                <div class="col-md-6 project-item"
+                     data-category="frontend javascript">
+
+                    <div class="project-card reveal">
+
+                        <div class="project-image">
+
+                            <img
+                                src="cal.png"
+                                alt="Advanced Scientific Calculator">
+
+                            <div class="project-overlay">
+
+                                <a
+                                    href="https://github.com/Anusha-kanneboina/Advanced-Scientific-Calculator"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    <i class="bi bi-github"></i>
+
+                                </a>
+                                <a
+                                    href="https://anusha-kanneboina.github.io/Advanced-Scientific-Calculator/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    <i class="bi bi-box-arrow-up-right"></i>
+
+                                </a>
 
                             </div>
 
-                            <div class="project-content">
+                        </div>
 
-                                <span class="project-type">
-                                    IoT / Deep Learning
+
+                        <div class="project-content">
+
+                            <div class="project-top">
+
+                                <span class="project-number">
+                                    01
                                 </span>
 
-                                <h3>
-                                    Animal Detection System
-                                </h3>
+                                <span class="project-type">
+                                    Web Application
+                                </span>
 
-                                <p>
-                                    A deep learning-based animal detection system with
-                                    SMS alerts and IoT notifications for real-time monitoring.
-                                </p>
+                            </div>
 
-                                <div class="project-tech">
-                                    <span>Python</span>
-                                    <span>Deep Learning</span>
-                                    <span>IoT</span>
-                                </div>
+                            <h3>
+                                Advanced Scientific Calculator
+                            </h3>
 
-                                <div class="project-links">
+                            <p>
+                                A responsive scientific calculator designed with
+                                advanced mathematical operations and an interactive
+                                user interface.
+                            </p>
 
-                                    <a href="#"
-                                       target="_blank">
-                                        GitHub
-                                        <i class="bi bi-github"></i>
-                                    </a>
+                            <div class="tech-stack">
 
-                                    <a href="#"
-                                       target="_blank">
-                                        Details
-                                        <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
 
-                                </div>
+                            </div>
+
+                            <div class="project-buttons">
+
+                                <a
+                                    href="https://github.com/Anusha-kanneboina/Advanced-Scientific-Calculator"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link">
+
+                                    GitHub
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+                                <a
+                                    href="https://anusha-kanneboina.github.io/Advanced-Scientific-Calculator/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link">
+
+                                    Live Demo
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
 
                             </div>
 
@@ -834,151 +707,169 @@
 
                     </div>
 
+                </div>
 
-                    <!-- Project 4 -->
 
-                    <div class="col-md-6 col-lg-4 project-item"
-                         data-category="iot">
+                <!-- To Do -->
 
-                        <div class="project-card">
+                <div class="col-md-6 project-item"
+                     data-category="frontend javascript">
 
-                            <div class="project-image">
+                    <div class="project-card reveal">
 
-                                <img src="earthquake.png"
-                                     alt="Earthquake Detection Project">
+                        <div class="project-image">
+
+                            <img
+                                src="to-do-list.png"
+                                alt="To Do List Application">
+
+                            <div class="project-overlay">
+
+                                <a
+                                    href="https://github.com/Anusha-kanneboina/to-do-list"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    <i class="bi bi-github"></i>
+
+                                </a>
+
+                                <a
+                                    href="https://anusha-kanneboina.github.io/to-do-list/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    <i class="bi bi-box-arrow-up-right"></i>
+
+                                </a>
 
                             </div>
 
-                            <div class="project-content">
+                        </div>
 
-                                <span class="project-type">
-                                    IoT
+
+                        <div class="project-content">
+
+                            <div class="project-top">
+
+                                <span class="project-number">
+                                    02
                                 </span>
 
-                                <h3>
-                                    Earthquake Detection System
-                                </h3>
+                                <span class="project-type">
+                                    Web Application
+                                </span>
 
-                                <p>
-                                    An IoT-based earthquake detection system using GSM and GPS
-                                    technologies for detecting seismic activity and sending alerts.
-                                </p>
+                            </div>
 
-                                <div class="project-tech">
-                                    <span>GSM</span>
-                                    <span>GPS</span>
-                                    <span>IoT</span>
-                                </div>
+                            <h3>
+                                To-Do List Application
+                            </h3>
 
-                                <div class="project-links">
+                            <p>
+                                A responsive task management application with
+                                priority selection, dates, search, theme switching
+                                and task management features.
+                            </p>
 
-                                    <a href="#"
-                                       target="_blank">
-                                        GitHub
-                                        <i class="bi bi-github"></i>
-                                    </a>
+                            <div class="tech-stack">
 
-                                    <a href="#"
-                                       target="_blank">
-                                        Details
-                                        <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
 
-                                </div>
+                            </div>
+
+                            <div class="project-buttons">
+
+                                <a
+                                    href="https://github.com/Anusha-kanneboina/to-do-list"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link">
+
+                                    GitHub
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                                <a
+                                    href="https://anusha-kanneboina.github.io/to-do-list/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link">
+
+                                    Live Demo
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
 
                             </div>
 
                         </div>
 
                     </div>
-
 
                 </div>
 
             </div>
 
-        </section>
+
+            <!-- ================= ACADEMIC PROJECTS ================= -->
+
+            <div class="academic-heading reveal">
+
+                <span>ACADEMIC WORK</span>
+
+                <h2>Academic <strong>Projects</strong></h2>
+
+                <p>
+                    Engineering projects developed as part of my academic journey.
+                </p>
+
+            </div>
 
 
-        <!-- ================= CONTACT SECTION ================= -->
-
-        <section id="contact" class="section-padding">
-
-            <div class="container">
-
-                <div class="section-heading text-center">
-
-                    <p class="section-subtitle">
-                        CONTACT ME
-                    </p>
-
-                    <h2>
-                        Let's Connect
-                    </h2>
-
-                    <p>
-                        Have an opportunity or want to get in touch?
-                        I'd love to hear from you.
-                    </p>
-
-                </div>
+            <div class="row g-4">
 
 
-                <div class="row g-5 align-items-center">
+                <!-- Animal Detection -->
 
-                    <!-- Contact Information -->
+                <div class="col-md-6 reveal">
 
-                    <div class="col-lg-5">
+                    <div class="academic-card">
 
-                        <div class="contact-info">
+                        <div class="academic-image">
+
+                            <img
+                                src="animal.png"
+                                alt="Animal Detection System">
+
+                        </div>
+
+                        <div class="academic-content">
+
+                            <div class="academic-label">
+                                <i class="bi bi-mortarboard"></i>
+                                Academic Project
+                            </div>
 
                             <h3>
-                                Let's talk
+                                Deep Learning Based Animal Detection
                             </h3>
 
                             <p>
-                                Feel free to reach out through email,
-                                LinkedIn or GitHub.
+                                Developed an intelligent animal detection system
+                                using deep learning with GSM/GPS integration for
+                                real-time alerts and location tracking.
                             </p>
 
+                            <div class="tech-stack">
 
-                            <div class="contact-item">
-
-                                <i class="bi bi-envelope"></i>
-
-                                <div>
-                                    <span>Email</span>
-                                    <a href="mailto:kanneboinaanusha719@gmail.com">
-                                        kanneboinaanusha719@gmail.com
-                                    </a>
-                                </div>
-
-                            </div>
-
-
-                            <div class="contact-item">
-
-                                <i class="bi bi-geo-alt"></i>
-
-                                <div>
-                                    <span>Location</span>
-                                    <p>Telangana, India</p>
-                                </div>
-
-                            </div>
-
-
-                            <div class="contact-item">
-
-                                <i class="bi bi-linkedin"></i>
-
-                                <div>
-                                    <span>LinkedIn</span>
-                                    <a href="https://www.linkedin.com/in/anusha-kanneboina-4a341b331"
-                                       target="_blank">
-                                        Connect with me
-                                    </a>
-                                </div>
+                                <span>Deep Learning</span>
+                                <span>GSM</span>
+                                <span>GPS</span>
+                                <span>IoT</span>
 
                             </div>
 
@@ -986,104 +877,256 @@
 
                     </div>
 
+                </div>
 
-                    <!-- Contact Form -->
 
-                    <div class="col-lg-7">
+                <!-- Earthquake -->
 
-                        <form id="contactForm"
-                              class="contact-form"
-                              novalidate>
+                <div class="col-md-6 reveal">
+
+                    <div class="academic-card">
+
+                        <div class="academic-image">
+
+                            <img
+                                src="earthquake .png"
+                                alt="Earthquake Detection System">
+
+                        </div>
+
+                        <div class="academic-content">
+
+                            <div class="academic-label">
+                                <i class="bi bi-mortarboard"></i>
+                                Academic Project
+                            </div>
+
+                            <h3>
+                                Earthquake Detection System
+                            </h3>
+
+                            <p>
+                                Designed an earthquake detection and alert system
+                                integrating GSM and GPS technologies for monitoring
+                                and location-based emergency communication.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>GSM</span>
+                                <span>GPS</span>
+                                <span>IoT</span>
+                                <span>Embedded Systems</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section-padding">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>GET IN TOUCH</span>
+
+                <h2>Let's <strong>Connect</strong></h2>
+
+                <p>
+                    Interested in opportunities, collaborations or simply want to
+                    connect? Feel free to reach out.
+                </p>
+
+            </div>
+
+
+            <div class="row g-5">
+
+
+                <!-- Contact Info -->
+
+                <div class="col-lg-5 reveal">
+
+                    <div class="contact-info">
+
+                        <h3>
+                            Contact Information
+                        </h3>
+
+                        <p>
+                            I am open to entry-level opportunities in Python,
+                            Full Stack and Web Development.
+                        </p>
+
+
+                        <a
+                            href="mailto:kanneboinaanusha719@gmail.com"
+                            class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+
+                            <div>
+                                <small>Email</small>
+                                <strong>
+                                    kanneboinaanusha719@gmail.com
+                                </strong>
+                            </div>
+
+                        </a>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+
+                            <div>
+                                <small>Location</small>
+                                <strong>
+                                    Telangana, India
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="https://www.linkedin.com/in/anushakanneboina"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="bi bi-linkedin"></i>
+                            </div>
+
+                            <div>
+                                <small>LinkedIn</small>
+                                <strong>
+                                    Connect with me
+                                </strong>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact Form -->
+
+                <div class="col-lg-7 reveal">
+
+                    <div class="contact-form-box">
+
+                        <form id="contactForm">
 
                             <div class="row g-3">
 
                                 <div class="col-md-6">
 
-                                    <label for="firstName"
-                                           class="form-label">
+                                    <label for="firstName">
                                         First Name
                                     </label>
 
-                                    <input type="text"
-                                           id="firstName"
-                                           class="form-control"
-                                           placeholder="Enter your first name"
-                                           required>
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        class="form-control"
+                                        placeholder="Your first name"
+                                        required>
 
                                 </div>
 
 
                                 <div class="col-md-6">
 
-                                    <label for="lastName"
-                                           class="form-label">
+                                    <label for="lastName">
                                         Last Name
                                     </label>
 
-                                    <input type="text"
-                                           id="lastName"
-                                           class="form-control"
-                                           placeholder="Enter your last name"
-                                           required>
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        class="form-control"
+                                        placeholder="Your last name">
 
                                 </div>
 
 
                                 <div class="col-12">
 
-                                    <label for="email"
-                                           class="form-label">
+                                    <label for="email">
                                         Email
                                     </label>
 
-                                    <input type="email"
-                                           id="email"
-                                           class="form-control"
-                                           placeholder="Enter your email"
-                                           required>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        class="form-control"
+                                        placeholder="your@email.com"
+                                        required>
 
                                 </div>
 
 
                                 <div class="col-12">
 
-                                    <label for="subject"
-                                           class="form-label">
+                                    <label for="subject">
                                         Subject
                                     </label>
 
-                                    <input type="text"
-                                           id="subject"
-                                           class="form-control"
-                                           placeholder="What would you like to discuss?"
-                                           required>
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        class="form-control"
+                                        placeholder="How can I help?"
+                                        required>
 
                                 </div>
 
 
                                 <div class="col-12">
 
-                                    <label for="message"
-                                           class="form-label">
+                                    <label for="message">
                                         Message
                                     </label>
 
-                                    <textarea id="message"
-                                              class="form-control"
-                                              rows="5"
-                                              placeholder="Write your message..."
-                                              required></textarea>
+                                    <textarea
+                                        id="message"
+                                        class="form-control"
+                                        rows="5"
+                                        placeholder="Write your message..."
+                                        required></textarea>
 
                                 </div>
 
 
                                 <div class="col-12">
 
-                                    <button type="submit"
-                                            class="btn btn-primary">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary-custom">
 
                                         Send Message
-                                        <i class="bi bi-send"></i>
+                                        <i class="bi bi-send-fill"></i>
 
                                     </button>
 
@@ -1099,37 +1142,72 @@
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
     <!-- ================= FOOTER ================= -->
 
-    <footer class="footer">
+    <footer>
 
-        <div class="container text-center">
+        <div class="container">
 
-            <p>
-                © 2026 Anusha Kanneboina. All rights reserved.
-            </p>
+            <div class="footer-content">
 
-            <div class="footer-socials">
+                <div>
 
-                <a href="https://github.com/Anusha-kanneboina"
-                   target="_blank"
-                   aria-label="GitHub">
+                    <h3>
+                        Anusha<span>.</span>
+                    </h3>
 
-                    <i class="bi bi-github"></i>
+                    <p>
+                        Aspiring Python Full Stack Developer
+                    </p>
 
-                </a>
+                </div>
 
-                <a href="https://www.linkedin.com/in/anusha-kanneboina-4a341b331"
-                   target="_blank"
-                   aria-label="LinkedIn">
 
-                    <i class="bi bi-linkedin"></i>
+                <div class="footer-socials">
 
+                    <a
+                        href="https://github.com/Anusha-kanneboina"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <i class="bi bi-github"></i>
+
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/anushakanneboina"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+                    <a
+                        href="mailto:kanneboinaanusha719@gmail.com">
+
+                        <i class="bi bi-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Anusha Kanneboina. All Rights Reserved.
+                </p>
+
+                <a href="#home">
+                    Back to top ↑
                 </a>
 
             </div>
@@ -1139,24 +1217,22 @@
     </footer>
 
 
-    <!-- Back To Top Button -->
+    <!-- Back To Top -->
 
-    <button id="backToTop"
-            class="back-to-top"
-            aria-label="Back to top">
-
+    <button id="backToTop" aria-label="Back to top">
         <i class="bi bi-arrow-up"></i>
-
     </button>
 
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
 
-    <!-- Custom JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Custom JS -->
+
     <script src="script.js"></script>
 
 </body>
-
 </html>
-```
